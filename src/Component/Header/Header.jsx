@@ -18,7 +18,7 @@ import Logo from '../../assets/school-logo.png';
 const pages = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/Aboutus' },
-  { name: 'Schools', path: '/Schools' },
+  { name: 'School', path: '/School' },
   { name: 'Features', path: '/Features' },
   { name: 'FAQs', path: '/FAQs' },
   { name: 'Contact us', path: '/ContactUs' },
