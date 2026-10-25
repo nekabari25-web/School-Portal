@@ -46,7 +46,7 @@
 .contact-form button {
   margin-top: 15px;
   padding: 12px;
-  background: #2980b9;
+  background: #256b22;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -56,5 +56,5 @@
 }
 
 .contact-form button:hover {
-  background: #1f6391;
+  background: #34745a;
 }

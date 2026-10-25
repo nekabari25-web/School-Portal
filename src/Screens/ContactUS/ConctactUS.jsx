@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./App.css";
+import Header from "../../Component/Header/Header";
+import "./ContactUs.css";
 
-function App() {
+function ContactUS() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="contact-container">
+      <Header />
       <h1>School Portal - Contact Us</h1>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name">Full Name</label>
@@ -62,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default ContactUS;

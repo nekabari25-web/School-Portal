@@ -9,6 +9,8 @@ import ScheduleIcon from '@mui/icons-material/Schedule';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import PeopleIcon from '@mui/icons-material/People';
 import SecurityIcon from '@mui/icons-material/Security';
+import Header from '../Component/Header/Header';
+import Grid from '@mui/material/Grid';
 
 const featuresPairs = [
   [
@@ -76,10 +78,12 @@ const partnerSchools = [
   { name: "Bethel Standard Secondary School", icon: <SchoolIcon sx={{ color: '#0f5132' }} /> }
 ];
 
-export default function FeaturesPage() {
+export default function featurePairs() {
   const navigate = useNavigate();
 
   return (
+    <Grid>
+    < Header />
     <Box sx={{ bgcolor: '#f8fafc', minHeight: '100vh', py: 6, px: 2, overflowX: 'hidden' }}>
       
       {/* Injecting CSS Keyframes for the Rolling Marquee Animation */}
@@ -269,5 +273,6 @@ export default function FeaturesPage() {
       </Box>
 
     </Box>
+    </Grid>
   );
 }
