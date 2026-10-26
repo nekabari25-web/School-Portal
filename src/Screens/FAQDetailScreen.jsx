@@ -7,11 +7,22 @@ import Typography from '@mui/material/Typography';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import Footer from '../Component/Footer/Footer';
 import Header from '../Component/Header/Header';
+import FAQs from '../Component/FAQs/FAQs';
 import questions from '../Component/FAQs/faqData';
 
 const FAQDetailScreen = () => {
   const { slug } = useParams();
   const question = questions.find((item) => item.slug === slug);
+
+  if (!slug) {
+    return (
+      <>
+        <Header />
+        <FAQs />
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>

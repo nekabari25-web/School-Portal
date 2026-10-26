@@ -207,7 +207,7 @@ export default function featurePairs() {
               '&:hover': { bgcolor: '#f59e0b' }
             }}
           >
-            <Link to="/contact" className="talk-to-us-btn">
+            <Link to="/ContactUs" className="talk-to-us-btn">
              Talk to Us &rarr;
               </Link>
           </Button>
