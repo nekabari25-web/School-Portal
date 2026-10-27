@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import schools from "../data/schools";
 import SearchBar from "./SearchBar";
-import SchoolCard from "./SchoolCard";
+import SchoolCard from "./SchoolCard"
+
 
 function PartnerSchools() {
   const [search, setSearch] = useState("");
@@ -34,18 +35,19 @@ function PartnerSchools() {
           search={search}
           setSearch={setSearch}
         />
-
+      
         <div className="school-results">
           Showing {visibleSchools.length} of{" "}
           {filteredSchools.length} schools
         </div>
-
+          
         <div className="school-grid">
           {visibleSchools.map((school) => (
             <SchoolCard
               key={school.id}
               school={school}
             />
+            
           ))}
         </div>
 

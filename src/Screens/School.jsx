@@ -1,10 +1,11 @@
 import React from 'react'
-import PatnerSchools from '../Component/PatnerSchools'
-
+import SchoolCarousel from '../Component/SchoolCarousel'
+import Headers from "../Component/Header/Header"
 const School = () => {
   return (
     <div>
-      <PatnerSchools/>
+      <SchoolCarousel/>
+      <Headers/>
     </div>
   )
 }
