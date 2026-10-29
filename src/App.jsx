@@ -5,6 +5,7 @@ import FAQDetailScreen from './Screens/FAQDetailScreen';
 import LoginPage from './Screens/LoginPage';
 import RegistrationPage from './Screens/RegistrationPage';
 import ContactUS from './Screens/ContactUS/ConctactUS';
+import About from './Screens/About';
 const App = () => {
   return (
     <div>
@@ -15,6 +16,8 @@ const App = () => {
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Registration" element={<RegistrationPage />} />
         <Route path="/ContactUs" element={<ContactUS />} />
+        <Route path="/Aboutus" element={<About />} />
+
       </Routes>
     </div>
   )
