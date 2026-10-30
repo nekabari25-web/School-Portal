@@ -10,6 +10,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import PeopleIcon from '@mui/icons-material/People';
 import SecurityIcon from '@mui/icons-material/Security';
 import Header from '../Component/Header/Header';
+import Footer from '../Component/Footer/Footer';
 import Grid from '@mui/material/Grid';
 
 const featuresPairs = [
@@ -197,7 +198,7 @@ export default function featurePairs() {
           </Box>
           <Button 
             variant="contained" 
-            onClick={() => navigate('/contact')}
+            onClick={() => navigate('/ContactUs')}
             sx={{ 
               bgcolor: '#fbbf24', 
               color: '#000', 
@@ -273,6 +274,7 @@ export default function featurePairs() {
       </Box>
 
     </Box>
+    <Footer />
     </Grid>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../Component/Header/Header";
 import "./ContactUs.css";
+import Footer from "../../Component/Footer/Footer"
 
 function ContactUS() {
   const [formData, setFormData] = useState({
@@ -24,6 +25,8 @@ function ContactUS() {
   };
 
   return (
+    <div>
+
     <div className="contact-container">
       <Header />
       <h1>School Portal - Contact Us</h1>
@@ -60,6 +63,8 @@ function ContactUS() {
 
         <button type="submit">Send Message</button>
       </form>
+    </div>
+      <Footer />
     </div>
   );
 }
