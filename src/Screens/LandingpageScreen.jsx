@@ -7,7 +7,6 @@ import FAQs from '../Component/FAQs/FAQs'
 import Contact from '../Component/Contact/Contact'
 import Footer from '../Component/Footer/Footer'
 
-import PatnerSchools from '../Component/PatnerSchools'
 const LandingpageScreen = () => {
   return (
     <div>
@@ -18,7 +17,6 @@ const LandingpageScreen = () => {
       <FAQs />
       <Contact />
       <Footer />
-      <PatnerSchools />
     </div>
   )
 }

@@ -6,9 +6,7 @@ import LoginPage from './Screens/LoginPage';
 import RegistrationPage from './Screens/RegistrationPage';
 import ContactUS from './Screens/ContactUS/ConctactUS';
 import About from './Screens/About';
-import PatnerSchools from '../src/Component/PatnerSchools';
 import School from './Screens/School';
-import SchoolCarousel from '../src/Component/SchoolCarousel';
 
 import "./App.css"
 const App = () => {
@@ -22,9 +20,7 @@ const App = () => {
         <Route path="/Registration" element={<RegistrationPage />} />
         <Route path="/ContactUs" element={<ContactUS />} />
         <Route path="/Aboutus" element={<About />} />
-        <Route path="/PatnerSchools" element={<PatnerSchools />}/>
         <Route path='/School' element={<School />}/>
-        <Route path='/SchoolCarousel' element={<SchoolCarousel />}/>
       </Routes>
     </div>
   )

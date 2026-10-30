@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
 import "./About.css";
+import Header from '../Component/Header/Header'
+import Footer from "../Component/Footer/Footer";
 
 function About() {
 return ( <div className="about-page">
 
+  <Header />
   {/* Navigation Bar */}
   <nav className="navbar">
     <div className="logo">
       <span className="logo-icon"></span>
-      <span className="logo-text">DONAC SCHOOL</span>
+      <span className="logo-text">SCHOOL PORTAL</span>
     </div>
 
     {/* <ul className="nav-links">
@@ -30,7 +33,7 @@ return ( <div className="about-page">
       <span className="portal-label">WHO WE ARE</span>
 
       <h1>
-        About the <span>Donac School</span> Management Portal
+        About the <span>School</span> Management Portal
       </h1>
 
       <p>
@@ -60,7 +63,7 @@ return ( <div className="about-page">
       <h2>Bringing Every Part of School Life Together</h2>
 
       <p>
-        The Donac School Management Portal is designed to simplify
+        The School Management Portal is designed to simplify
         everyday school operations by connecting school administration,
         teachers, students, and families through one accessible platform.
       </p>
@@ -190,12 +193,13 @@ return ( <div className="about-page">
       <h2>Making School Management Simpler for Everyone</h2>
 
       <p>
-        By bringing essential school services together, the Donac
+        By bringing essential school services together, the
         School Management Portal helps create a more connected,
         organised, and supportive educational community.
       </p>
     </div>
   </section>
+  <Footer />
 
 </div>
 

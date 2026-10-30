@@ -27,7 +27,7 @@ function PartnerSchools() {
           <h2>Our Partner Schools</h2>
 
           <p>
-           These are schools currently using the Donac Schools Portal.
+           These are schools currently using the Schools Portal.
           </p>
         </div>
 

@@ -43,7 +43,7 @@ const Footer = () => {
       sx={{
         px: { xs: 2.5, sm: 3 },
         color: '#fff',
-        backgroundColor: '#1c322b',
+        backgroundColor: '#000a07',
       }}
     >
       <Container maxWidth="lg" disableGutters>
