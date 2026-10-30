@@ -47,7 +47,7 @@ const About = () => (
       color: '#256b22',
       scrollMarginTop: '88px',
       background:
-        'radial-gradient(ellipse at 95% 5%, rgba(220, 237, 224, 0.72), transparent 36%), #f8faf7',
+        'radial-gradient(ellipse at 95% 5%, rgba(118, 124, 120, 0.72), transparent 36%), #e0f8d5',
     }}
   >
     <Container maxWidth="lg" disableGutters>
@@ -63,7 +63,7 @@ const About = () => (
           sx={{
             p: { xs: 2.5, sm: 4 },
             borderRadius: 4,
-            backgroundImage: `linear-gradient(90deg, rgba(109, 117, 105, 0.16), rgba(199, 212, 192, 0.23)), url(${emptyClassImage})`,
+            backgroundImage: `linear-gradient(90deg, rgba(1, 3, 0, 0.48), rgba(0, 0, 0, 0.55)), url(${emptyClassImage})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           }}
@@ -94,7 +94,7 @@ const About = () => (
             }}
           >
             School operations,{' '}
-            <Box component="span" sx={{ color: '#0f442f' }}>
+            <Box component="span" sx={{ color: '#31db94' }}>
               working together.
             </Box>
           </Typography>
