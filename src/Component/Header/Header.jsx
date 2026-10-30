@@ -8,41 +8,35 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Divider from '@mui/material/Divider';
 import Logo from '../../assets/school-logo.png';
 
 // Fixed the syntax error by turning it into a proper array of objects
 const pages = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/Aboutus' },
-  { name: 'School', path: '/School' },
-  { name: 'Features', path: '/Features' },
+  { name: 'Schools', path: '/Schools' },
+  { name: 'Features', path: '/FeaturesPage' },
   { name: 'FAQs', path: '/FAQs' },
   { name: 'Contact us', path: '/ContactUs' },
 ];
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const accountLinks = [
+  { name: 'Login', path: '/Login' },
+  { name: 'Sign up', path: '/Registration' },
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -54,7 +48,7 @@ function ResponsiveAppBar() {
         right: 0,
         zIndex: 9999,
         maxHeight: '12vh',
-        backgroundColor: '#63e65e',
+        backgroundColor: '#34745a',
         boxShadow: 'none',
       }}
     >
@@ -97,6 +91,17 @@ function ResponsiveAppBar() {
                   <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
                 </MenuItem>
               ))}
+              <Divider />
+              {accountLinks.map((link) => (
+                <MenuItem
+                  key={link.path}
+                  onClick={handleCloseNavMenu}
+                  component={RouterLink}
+                  to={link.path}
+                >
+                  <Typography sx={{ textAlign: 'center' }}>{link.name}</Typography>
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
           <Box
@@ -106,7 +111,7 @@ function ResponsiveAppBar() {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              mr: 2,
+              mr: 1,
               flexGrow: { xs: 1, md: 0 },
             }}
           >
@@ -117,43 +122,38 @@ function ResponsiveAppBar() {
               sx={{ display: 'block', width: 120, height: 56, objectFit: 'contain' }}
             />
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', ml: 10,} }}>
+          <Box sx={{ flexGrow: 1, ml: { md: 10 }, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.path}
                 onClick={handleCloseNavMenu}
                 component={RouterLink} // Links desktop buttons to React Router
                 to={page.path}
-                sx={{ my: 2, ml: 3, color: 'primary', display: 'block', fontSize: '20px' }}
+                sx={{ my: 2, ml: 2, color: '#fff', display: 'block', fontSize: '18px', ":hover": { backgroundColor: '#cfcccc', color: '#064e04' } }}
               >
                 {page.name}
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1 }}>
+            {accountLinks.map((link) => (
+              <Button
+                key={link.path}
+                component={RouterLink}
+                to={link.path}
+                color="inherit"
+                variant={link.name === 'Sign up' ? 'contained' : 'text'}
+                sx={{
+                  whiteSpace: 'nowrap',
+                  ...(link.name === 'Sign up' && {
+                    backgroundColor: '#256b22',
+                    '&:hover': { backgroundColor: '#1d561a' },
+                  }),
+                }}
+              >
+                {link.name}
+              </Button>
+            ))}
           </Box>
         </Toolbar>
       </Container>
